@@ -1,9 +1,6 @@
 const { validateResult } = require('../../../middleware/utils')
 const { check } = require('express-validator')
 
-/**
- * Validates update item request
- */
 const validateUpdateCity = [
   check('name')
     .exists()

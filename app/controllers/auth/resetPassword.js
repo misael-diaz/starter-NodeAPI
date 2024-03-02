@@ -7,11 +7,6 @@ const {
 } = require('./helpers')
 const { handleError } = require('../../middleware/utils')
 
-/**
- * Reset password function called by route
- * @param {Object} req - request object
- * @param {Object} res - response object
- */
 const resetPassword = async (req, res) => {
   try {
     const data = matchedData(req)

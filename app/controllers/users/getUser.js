@@ -3,11 +3,6 @@ const { matchedData } = require('express-validator')
 const { isIDGood, handleError } = require('../../middleware/utils')
 const { getItem } = require('../../middleware/db')
 
-/**
- * Get item function called by route
- * @param {Object} req - request object
- * @param {Object} res - response object
- */
 const getUser = async (req, res) => {
   try {
     req = matchedData(req)

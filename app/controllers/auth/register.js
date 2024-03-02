@@ -8,14 +8,8 @@ const {
   sendRegistrationEmailMessage
 } = require('../../middleware/emailer')
 
-/**
- * Register function called by route
- * @param {Object} req - request object
- * @param {Object} res - response object
- */
 const register = async (req, res) => {
   try {
-    // Gets locale from header 'Accept-Language'
     const locale = req.getLocale()
     req = matchedData(req)
     const doesEmailExists = await emailExists(req.email)

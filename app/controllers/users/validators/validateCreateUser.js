@@ -2,9 +2,6 @@ const { validateResult } = require('../../../middleware/utils')
 const validator = require('validator')
 const { check } = require('express-validator')
 
-/**
- * Validates create new item request
- */
 const validateCreateUser = [
   check('name')
     .exists()

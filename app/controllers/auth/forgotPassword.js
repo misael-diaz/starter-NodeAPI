@@ -7,14 +7,8 @@ const {
 const { handleError } = require('../../middleware/utils')
 const { sendResetPasswordEmailMessage } = require('../../middleware/emailer')
 
-/**
- * Forgot password function called by route
- * @param {Object} req - request object
- * @param {Object} res - response object
- */
 const forgotPassword = async (req, res) => {
   try {
-    // Gets locale from header 'Accept-Language'
     const locale = req.getLocale()
     const data = matchedData(req)
     await findUser(data.email)

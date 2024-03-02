@@ -1,9 +1,5 @@
 const { buildErrObject } = require('../../../middleware/utils')
 
-/**
- * Saves login attempts to dabatabse
- * @param {Object} user - user object
- */
 const saveLoginAttemptsToDB = (user = {}) => {
   return new Promise((resolve, reject) => {
     user.save((err, result) => {

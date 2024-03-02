@@ -1,9 +1,6 @@
 const { validateResult } = require('../../../middleware/utils')
 const { check } = require('express-validator')
 
-/**
- * Validates delete item request
- */
 const validateDeleteUser = [
   check('id')
     .exists()

@@ -1,9 +1,6 @@
 const { validateResult } = require('../../../middleware/utils')
 const { check } = require('express-validator')
 
-/**
- * Validates verify request
- */
 const validateVerify = [
   check('id')
     .exists()

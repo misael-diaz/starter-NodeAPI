@@ -1,10 +1,6 @@
 const User = require('../../../models/user')
 const { itemNotFound } = require('../../../middleware/utils')
 
-/**
- * Finds user by email
- * @param {string} email - user´s email
- */
 const findUser = (email = '') => {
   return new Promise((resolve, reject) => {
     User.findOne(

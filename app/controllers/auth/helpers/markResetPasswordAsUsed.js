@@ -6,11 +6,6 @@ const {
   buildSuccObject
 } = require('../../../middleware/utils')
 
-/**
- * Marks a request to reset password as used
- * @param {Object} req - request object
- * @param {Object} forgot - forgot object
- */
 const markResetPasswordAsUsed = (req = {}, forgot = {}) => {
   return new Promise((resolve, reject) => {
     forgot.used = true
