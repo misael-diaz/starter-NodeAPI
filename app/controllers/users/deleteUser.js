@@ -3,11 +3,6 @@ const { matchedData } = require('express-validator')
 const { isIDGood, handleError } = require('../../middleware/utils')
 const { deleteItem } = require('../../middleware/db')
 
-/**
- * Delete item function called by route
- * @param {Object} req - request object
- * @param {Object} res - response object
- */
 const deleteUser = async (req, res) => {
   try {
     req = matchedData(req)

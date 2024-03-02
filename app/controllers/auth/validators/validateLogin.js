@@ -1,12 +1,6 @@
 const { validateResult } = require('../../../middleware/utils')
 const { check } = require('express-validator')
 
-/**
- * Validates register request
- */
-/**
- * Validates login request
- */
 const validateLogin = [
   check('email')
     .exists()

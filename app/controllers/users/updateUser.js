@@ -4,11 +4,6 @@ const { isIDGood, handleError } = require('../../middleware/utils')
 const { updateItem } = require('../../middleware/db')
 const { emailExistsExcludingMyself } = require('../../middleware/emailer')
 
-/**
- * Update item function called by route
- * @param {Object} req - request object
- * @param {Object} res - response object
- */
 const updateUser = async (req, res) => {
   try {
     req = matchedData(req)

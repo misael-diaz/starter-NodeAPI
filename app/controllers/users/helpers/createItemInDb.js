@@ -2,10 +2,6 @@ const uuid = require('uuid')
 const User = require('../../../models/user')
 const { buildErrObject } = require('../../../middleware/utils')
 
-/**
- * Creates a new item in database
- * @param {Object} req - request object
- */
 const createItemInDb = ({
   name = '',
   email = '',

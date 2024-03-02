@@ -1,9 +1,6 @@
 const { validateResult } = require('../../../middleware/utils')
 const { check } = require('express-validator')
 
-/**
- * Validates reset password request
- */
 const validateResetPassword = [
   check('id')
     .exists()
