@@ -1,10 +1,6 @@
 const City = require('../../../models/city')
 const { buildErrObject } = require('../../../middleware/utils')
 
-/**
- * Checks if a city already exists in database
- * @param {string} name - name of item
- */
 const cityExists = (name = '') => {
   return new Promise((resolve, reject) => {
     City.findOne(

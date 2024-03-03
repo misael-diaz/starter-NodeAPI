@@ -1,9 +1,6 @@
 const { validateResult } = require('../../../middleware/utils')
 const { check } = require('express-validator')
 
-/**
- * Validates change password request
- */
 const validateChangePassword = [
   check('oldPassword')
     .optional()

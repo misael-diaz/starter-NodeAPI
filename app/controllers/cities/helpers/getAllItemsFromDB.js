@@ -1,9 +1,6 @@
 const City = require('../../../models/city')
 const { buildErrObject } = require('../../../middleware/utils')
 
-/**
- * Gets all items from database
- */
 const getAllItemsFromDB = () => {
   return new Promise((resolve, reject) => {
     City.find(

@@ -3,11 +3,6 @@ const { verificationExists, verifyUser } = require('./helpers')
 
 const { handleError } = require('../../middleware/utils')
 
-/**
- * Verify function called by route
- * @param {Object} req - request object
- * @param {Object} res - response object
- */
 const verify = async (req, res) => {
   try {
     req = matchedData(req)

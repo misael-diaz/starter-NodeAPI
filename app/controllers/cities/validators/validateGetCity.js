@@ -1,9 +1,6 @@
 const { validateResult } = require('../../../middleware/utils')
 const { check } = require('express-validator')
 
-/**
- * Validates get item request
- */
 const validateGetCity = [
   check('id')
     .exists()

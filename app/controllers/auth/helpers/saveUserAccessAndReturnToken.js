@@ -8,11 +8,6 @@ const {
   buildErrObject
 } = require('../../../middleware/utils')
 
-/**
- * Saves a new user access and then returns token
- * @param {Object} req - request object
- * @param {Object} user - user object
- */
 const saveUserAccessAndReturnToken = (req = {}, user = {}) => {
   return new Promise((resolve, reject) => {
     const userAccess = new UserAccess({
@@ -27,7 +22,6 @@ const saveUserAccessAndReturnToken = (req = {}, user = {}) => {
           return reject(buildErrObject(422, err.message))
         }
         const userInfo = await setUserInfo(user)
-        // Returns data with access token
         resolve({
           token: generateToken(user._id),
           user: userInfo

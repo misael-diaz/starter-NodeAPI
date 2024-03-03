@@ -7,10 +7,6 @@ const {
   buildErrObject
 } = require('../../../middleware/utils')
 
-/**
- * Creates a new password forgot
- * @param {Object} req - request object
- */
 const saveForgotPassword = (req = {}) => {
   return new Promise((resolve, reject) => {
     const forgot = new ForgotPassword({
