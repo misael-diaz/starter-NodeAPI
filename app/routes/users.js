@@ -24,6 +24,13 @@ const {
   validateDeleteUser
 } = require('../controllers/users/validators')
 
+/*
+ * Users routes
+ */
+
+/*
+ * Get items route
+ */
 router.get(
   '/',
   requireAuth,
@@ -32,6 +39,9 @@ router.get(
   getUsers
 )
 
+/*
+ * Create new item route
+ */
 router.post(
   '/',
   requireAuth,
@@ -41,6 +51,9 @@ router.post(
   createUser
 )
 
+/*
+ * Get item route
+ */
 router.get(
   '/:id',
   requireAuth,
@@ -50,6 +63,9 @@ router.get(
   getUser
 )
 
+/*
+ * Update item route
+ */
 router.patch(
   '/:id',
   requireAuth,
@@ -59,6 +75,9 @@ router.patch(
   updateUser
 )
 
+/*
+ * Delete item route
+ */
 router.delete(
   '/:id',
   requireAuth,

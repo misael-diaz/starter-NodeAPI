@@ -1,5 +1,11 @@
 const { buildErrObject } = require('../../middleware/utils')
 
+/**
+ * Checks the query string for filtering records
+ * query.filter should be the text to search (string)
+ * query.fields should be the fields to search into (array)
+ * @param {Object} query - query object
+ */
 const checkQueryString = (query = {}) => {
   return new Promise((resolve, reject) => {
     try {
@@ -11,7 +17,9 @@ const checkQueryString = (query = {}) => {
           $or: []
         }
         const array = []
+        // Takes fields param and builds an array by splitting with ','
         const arrayFields = query.fields.split(',')
+        // Adds SQL Like %word% with regex
         arrayFields.map((item) => {
           array.push({
             [item]: {
@@ -19,6 +27,7 @@ const checkQueryString = (query = {}) => {
             }
           })
         })
+        // Puts array result in data
         data.$or = array
         resolve(data)
       } else {

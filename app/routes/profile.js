@@ -20,7 +20,13 @@ const {
   validateChangePassword
 } = require('../controllers/profile/validators')
 
+/*
+ * Profile routes
+ */
 
+/*
+ * Get profile route
+ */
 router.get(
   '/',
   requireAuth,
@@ -29,6 +35,9 @@ router.get(
   getProfile
 )
 
+/*
+ * Update profile route
+ */
 router.patch(
   '/',
   requireAuth,
@@ -38,6 +47,9 @@ router.patch(
   updateProfile
 )
 
+/*
+ * Change password route
+ */
 router.post(
   '/changePassword',
   requireAuth,
