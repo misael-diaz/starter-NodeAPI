@@ -1,11 +1,6 @@
 const User = require('../../models/user')
 const { buildErrObject } = require('../../middleware/utils')
 
-/**
- * Checks User model if user with an specific email exists but excluding user id
- * @param {string} id - user id
- * @param {string} email - user email
- */
 const emailExistsExcludingMyself = (id = '', email = '') => {
   return new Promise((resolve, reject) => {
     User.findOne(
