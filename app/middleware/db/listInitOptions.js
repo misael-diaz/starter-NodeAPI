@@ -1,6 +1,10 @@
 const { buildErrObject } = require('../../middleware/utils')
 const { buildSort } = require('./buildSort')
 
+/**
+ * Builds initial options for query
+ * @param {Object} query - query object
+ */
 const listInitOptions = (req = {}) => {
   return new Promise(async (resolve, reject) => {
     try {

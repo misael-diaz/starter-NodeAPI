@@ -1,3 +1,7 @@
+/**
+ * Builds an object with created forgot password object, if env is development or testing exposes the verification
+ * @param {Object} item - created forgot password object
+ */
 const forgotPasswordResponse = ({ email = '', verification = '' }) => {
   let data = {
     msg: 'RESET_EMAIL_SENT',

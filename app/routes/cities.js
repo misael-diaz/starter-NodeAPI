@@ -25,8 +25,18 @@ const {
   validateDeleteCity
 } = require('../controllers/cities/validators')
 
+/*
+ * Cities routes
+ */
+
+/*
+ * Get all items route
+ */
 router.get('/all', getAllCities)
 
+/*
+ * Get items route
+ */
 router.get(
   '/',
   requireAuth,
@@ -35,6 +45,9 @@ router.get(
   getCities
 )
 
+/*
+ * Create new item route
+ */
 router.post(
   '/',
   requireAuth,
@@ -44,6 +57,9 @@ router.post(
   createCity
 )
 
+/*
+ * Get item route
+ */
 router.get(
   '/:id',
   requireAuth,
@@ -53,6 +69,9 @@ router.get(
   getCity
 )
 
+/*
+ * Update item route
+ */
 router.patch(
   '/:id',
   requireAuth,
@@ -62,6 +81,9 @@ router.patch(
   updateCity
 )
 
+/*
+ * Delete item route
+ */
 router.delete(
   '/:id',
   requireAuth,
